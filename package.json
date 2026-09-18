@@ -1,0 +1,22 @@
+{
+  "name": "estate-etag-system",
+  "version": "1.0.0",
+  "description": "Estate E-Tag System — resident, security and admin portal for estate vehicle access",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "estate",
+    "access-control",
+    "vehicle-registration",
+    "express"
+  ],
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

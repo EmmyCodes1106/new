@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply for an E-Tag | Estate E-Tag System</title>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/etag-application.css">
+</head>
+<body>
+  <main class="page">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 55 55" width="55" height="55">
+            <polygon points="9,3 45,3 45,36 27,54 9,36" stroke="#3eae6c" stroke-width="3" fill="none" />
+            <polygon points="21,21 34,21 34,39 21,47 21,39" fill="#3eae6c" opacity="0.9" />
+            <rect x="27" y="13" width="10" height="8" fill="#3eae6c" opacity="0.4" rx="1" />
+          </svg>
+        </div>
+        <div class="brand-name">ESTATE E-TAG</div>
+        <div class="brand-system">SYSTEM</div>
+      </div>
+
+      <h2>Apply for an <span>E-Tag.</span></h2>
+      <p class="sidebar-copy">Submit your vehicle details and documents for estate access approval.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M10 2L3 5v5c0 4.418 2.686 8.5 7 10 4.314-1.5 7-5.582 7-10V5l-7-3z" /><path d="M7 10l2 2 4-4" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Simple application</div>
+            <div class="feature-text">Select your registered vehicle and provide the required details.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="6" width="14" height="11" rx="1" /><path d="M7 6V4a2 2 0 012-2h2a2 2 0 012 2v2" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Upload documents</div>
+            <div class="feature-text">Add proof of ownership and identification for review.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="10" cy="10" r="7" /><path d="M10 3v7l4 2" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Track status</div>
+            <div class="feature-text">Your application can show pending, approved or correction status.</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="form-shell etag-shell">
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+        <div class="topbar">
+          <div class="user-chip">
+            <span class="avatar" data-user-avatar>R</span>
+            <div>
+              <strong data-user-name>Resident</strong>
+              <small data-user-role>Resident</small>
+            </div>
+          </div>
+          <div class="safe">
+            <span class="safe-icon">✓</span>
+            <span>Your data is safe<br>with us</span>
+          </div>
+        </div>
+
+        <h1>Apply for an E-Tag</h1>
+        <p class="subtitle">Request an E-Tag for one of your registered vehicles</p>
+
+        <div id="notice" class="notice" hidden role="status" aria-live="polite"></div>
+
+        <form id="etagForm" novalidate>
+          <h3>Vehicle Information</h3>
+
+          <div class="field">
+            <label for="vehicle">Select Registered Vehicle</label>
+            <div class="select-wrap">
+              <span class="field-icon">▣</span>
+              <select id="vehicle" required>
+                <option value="" selected disabled>Select a registered vehicle</option>
+                <option value="toyota-corolla" data-plate="ABC 123 XY" data-color="Black" data-make="Toyota" data-model="Corolla">
+                  Toyota Corolla — ABC 123 XY
+                </option>
+                <option value="honda-civic" data-plate="KJA 456 AB" data-color="White" data-make="Honda" data-model="Civic">
+                  Honda Civic — KJA 456 AB
+                </option>
+              </select>
+            </div>
+            <small class="field-help">Only vehicles already registered to your resident account appear here.</small>
+          </div>
+
+          <div class="two">
+            <div class="field">
+              <label for="plate">License Plate Number</label>
+              <div class="input-wrap">
+                <span class="field-icon">▤</span>
+                <input id="plate" type="text" placeholder="e.g. ABC 123 XY" readonly>
+              </div>
+            </div>
+            <div class="field">
+              <label for="color">Vehicle Color</label>
+              <div class="input-wrap">
+                <span class="field-icon">◐</span>
+                <input id="color" type="text" placeholder="e.g. Black" readonly>
+              </div>
+            </div>
+          </div>
+
+          <div class="two">
+            <div class="field">
+              <label for="make">Vehicle Make</label>
+              <div class="input-wrap">
+                <span class="field-icon">⌂</span>
+                <input id="make" type="text" placeholder="e.g. Toyota" readonly>
+              </div>
+            </div>
+            <div class="field">
+              <label for="model">Vehicle Model</label>
+              <div class="input-wrap">
+                <span class="field-icon">◇</span>
+                <input id="model" type="text" placeholder="e.g. Corolla" readonly>
+              </div>
+            </div>
+          </div>
+
+          <h3>Supporting Documents</h3>
+
+          <div class="field">
+            <label for="ownership">Proof of Vehicle Ownership</label>
+            <div class="upload">
+              <div class="upload-icon">↑</div>
+              <div class="upload-copy">
+                <strong>Upload ownership document</strong>
+                <small>PDF, JPG or PNG</small>
+              </div>
+              <input id="ownership" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
+            </div>
+            <div id="ownershipName" class="file-name"></div>
+          </div>
+
+          <div class="field">
+            <label for="identification">Identification</label>
+            <div class="upload">
+              <div class="upload-icon">↑</div>
+              <div class="upload-copy">
+                <strong>Upload identification document</strong>
+                <small>PDF, JPG or PNG</small>
+              </div>
+              <input id="identification" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
+            </div>
+            <div id="identificationName" class="file-name"></div>
+          </div>
+
+          <label class="check">
+            <input id="confirmation" type="checkbox" required>
+            <span>I confirm that the vehicle details and supporting documents provided are accurate and belong to this resident account.</span>
+          </label>
+
+          <button id="submitBtn" class="btn" type="submit">
+            Submit E-Tag Application <span class="arrow">→</span>
+          </button>
+
+          <p class="hint">
+            This is a frontend-only resident view. The submission is simulated with JavaScript for now; backend/API processing can be connected later.
+          </p>
+        </form>
+
+        <div id="successCard" class="success-card" hidden>
+          <div class="success-mark">✓</div>
+          <h2>Application Submitted</h2>
+          <p>Your E-Tag application has been recorded in this demo as <strong>Pending Review</strong>.</p>
+          <div class="summary">
+            <div><span>Vehicle</span><strong id="summaryVehicle"></strong></div>
+            <div><span>Plate</span><strong id="summaryPlate"></strong></div>
+            <div><span>Status</span><strong class="status-pending">Pending Review</strong></div>
+          </div>
+          <button id="newApplication" class="btn-outline" type="button">Start New Application</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/session.js"></script>
+  <script src="assets/js/etag-application.js"></script>
+</body>
+</html>

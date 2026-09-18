@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | Estate E-Tag System</title>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+  <main class="page">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 55 55" width="55" height="55">
+            <polygon points="9,3 45,3 45,36 27,54 9,36" stroke="#3eae6c" stroke-width="3" fill="none" />
+            <polygon points="21,21 34,21 34,39 21,47 21,39" fill="#3eae6c" opacity="0.9" />
+            <rect x="27" y="13" width="10" height="8" fill="#3eae6c" opacity="0.4" rx="1" />
+          </svg>
+        </div>
+        <div class="brand-name">ESTATE E-TAG</div>
+        <div class="brand-system">SYSTEM</div>
+      </div>
+
+      <h2>Your <span>profile.</span></h2>
+      <p class="sidebar-copy">Manage your resident information and keep your vehicle details up to date.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="10" cy="10" r="7" /><path d="M10 3v7l4 2" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Resident details</div>
+            <div class="feature-text">View and update your contact information.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="6" width="14" height="11" rx="1" /><path d="M7 6V4a2 2 0 012-2h2a2 2 0 012 2v2" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Your vehicles</div>
+            <div class="feature-text">Keep your registered vehicle information current.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M10 2L3 5v5c0 4.418 2.686 8.5 7 10 4.314-1.5 7-5.582 7-10V5l-7-3z" /><path d="M7 10l2 2 4-4" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">E-Tag access</div>
+            <div class="feature-text">See your current E-Tag status and related vehicle.</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="form-shell profile-shell">
+
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+        <div class="topbar">
+          <div>
+            <h1>My Profile</h1>
+            <p class="subtitle">View and manage your resident information</p>
+          </div>
+          <div class="safe">
+            <span class="safe-icon">✓</span>
+            <span>Your data is safe<br>with us</span>
+          </div>
+        </div>
+
+        <div class="profile-header">
+          <div class="profile-avatar">JD</div>
+          <div class="profile-main">
+            <h2>John Doe</h2>
+            <p>Resident &middot; Unit 5A</p>
+          </div>
+          <span class="tag active">Active Account</span>
+        </div>
+
+        <section class="card">
+          <div class="card-heading">
+            <div>
+              <h3>Personal Information</h3>
+              <p>Keep your resident and contact information current.</p>
+            </div>
+            <button class="btn-outline" type="button">Edit</button>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item"><span>Full Name</span><strong>John Doe</strong></div>
+            <div class="info-item"><span>Email Address</span><strong>john.doe@email.com</strong></div>
+            <div class="info-item"><span>Phone Number</span><strong>080X XXX XXXX</strong></div>
+            <div class="info-item"><span>House / Unit Number</span><strong>Unit 5A</strong></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-heading">
+            <div>
+              <h3>Registered Vehicles</h3>
+              <p>Vehicles connected to your resident account.</p>
+            </div>
+            <a class="text-btn" href="vehicle-registration.html">+ Add Vehicle</a>
+          </div>
+
+          <div class="vehicle-table">
+            <div class="vehicle-row vehicle-head">
+              <span>Vehicle</span>
+              <span>Plate Number</span>
+              <span>Color</span>
+              <span>Status</span>
+            </div>
+            <div class="vehicle-row">
+              <div><strong>Toyota Corolla</strong><small>Toyota · Corolla</small></div>
+              <span>ABC 123 XY</span>
+              <span>Black</span>
+              <span class="tag active">Registered</span>
+            </div>
+            <div class="vehicle-row">
+              <div><strong>Honda Civic</strong><small>Honda · Civic</small></div>
+              <span>KJA 456 AB</span>
+              <span>White</span>
+              <span class="tag active">Registered</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-heading">
+            <div>
+              <h3>E-Tag Status</h3>
+              <p>Your vehicle access tag and its current state.</p>
+            </div>
+            <a class="text-btn" href="etag-application.html">View Application</a>
+          </div>
+
+          <div class="etag-summary">
+            <div class="qr-placeholder">
+              <div class="qr-grid">
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+
+            <div class="etag-details">
+              <div class="etag-top">
+                <div>
+                  <span class="label">E-Tag ID</span>
+                  <strong>ET-10284</strong>
+                </div>
+                <span class="tag active">Active</span>
+              </div>
+
+              <div class="details-grid">
+                <div><span class="label">Vehicle</span><strong>Toyota Corolla</strong></div>
+                <div><span class="label">Plate Number</span><strong>ABC 123 XY</strong></div>
+                <div><span class="label">Expiry Date</span><strong>31 Dec 2026</strong></div>
+                <div><span class="label">Application Status</span><strong>Approved</strong></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <p class="footer-note">Only information associated with your resident account is shown on this page.</p>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/session.js"></script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Estate E-Tag System</title>
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <main class="page">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 55 55" width="55" height="55">
+            <polygon points="9,3 45,3 45,36 27,54 9,36" stroke="#3eae6c" stroke-width="3" fill="none" />
+            <polygon points="21,21 34,21 34,39 21,47 21,39" fill="#3eae6c" opacity="0.9" />
+            <rect x="27" y="13" width="10" height="8" fill="#3eae6c" opacity="0.4" rx="1" />
+          </svg>
+        </div>
+        <div class="brand-name">ESTATE E-TAG</div>
+        <div class="brand-system">SYSTEM</div>
+      </div>
+
+      <h2>Welcome <span id="sidebarName">back.</span></h2>
+      <p class="sidebar-copy" id="sidebarRole">Manage your estate access from one place.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="10" cy="10" r="7" /><path d="M3 3l3 3M17 3l-3 3M3 17l3-3M17 17l-3-3" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Secure access</div>
+            <div class="feature-text">Your estate account stays protected.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="6" width="14" height="11" rx="1" /><path d="M7 6V4a2 2 0 012-2h2a2 2 0 012 2v2" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">One account</div>
+            <div class="feature-text">Manage your profile, vehicles and E-Tags.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 20 20" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="10" cy="10" r="7" /><path d="M10 3v7l4 2" /></svg>
+          </div>
+          <div>
+            <div class="feature-title">Fast gate access</div>
+            <div class="feature-text">Your approved E-Tag is verified in real time.</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="form-shell dashboard-shell">
+
+        <div class="topbar">
+          <div class="user-chip">
+            <span class="avatar" data-user-avatar>JD</span>
+            <div>
+              <strong data-user-name>John Doe</strong>
+              <small data-user-role>Resident</small>
+            </div>
+          </div>
+          <div class="safe">
+            <span class="safe-icon">✓</span>
+            <span>Your data is safe<br>with us</span>
+          </div>
+        </div>
+
+        <div class="welcome-row">
+          <div>
+            <h1>Dashboard</h1>
+            <p class="subtitle">Quick access to your estate tools</p>
+          </div>
+          <a href="login.html" id="logoutBtn" class="icon-btn">
+            <svg viewBox="0 0 20 20" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M13 7l4 3-4 3M7 10h10M7 17H5a2 2 0 01-2-2V5a2 2 0 012-2h2" /></svg>
+            Logout
+          </a>
+        </div>
+
+        <div id="residentSection" hidden>
+          <div class="dash-section-title">Resident Tools</div>
+          <div class="dash-grid">
+            <a href="profile.html" class="dash-card">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <h4>My Profile</h4>
+              <p>View and manage your personal information</p>
+            </a>
+            <a href="vehicle-registration.html" class="dash-card">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><rect x="2" y="10" width="20" height="10" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M6 10l2-4h8l2 4" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <h4>Register Vehicle</h4>
+              <p>Add a vehicle to your resident account</p>
+            </a>
+            <a href="etag-application.html" class="dash-card">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12l3 3 6-6" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <h4>Apply for E-Tag</h4>
+              <p>Request an E-Tag for a registered vehicle</p>
+            </a>
+          </div>
+        </div>
+
+        <div id="securitySection" hidden>
+          <div class="dash-section-title">Gate Tools</div>
+          <div class="dash-grid">
+            <a href="scan.html" class="dash-card">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 12l2 2 5-5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 9h3M18 9h3M3 15h3M18 15h3M9 3v3M15 3v3M9 21v-3M15 21v-3" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <h4>Scan E-Tag</h4>
+              <p>Verify vehicle access at the gate</p>
+            </a>
+          </div>
+        </div>
+
+        <div id="adminSection" hidden>
+          <div class="dash-section-title">Administration</div>
+          <div class="dash-grid">
+            <a href="#" class="dash-card dash-card-disabled">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <h4>Review Applications</h4>
+              <p>Manage pending E-Tag requests</p>
+              <span class="dash-soon">Coming soon</span>
+            </a>
+            <a href="#" class="dash-card dash-card-disabled">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 8h8M8 12h6M8 16h4" stroke="currentColor" stroke-width="1.8"/></svg>
+              </div>
+              <h4>Reports</h4>
+              <p>Operational reports and analytics</p>
+              <span class="dash-soon">Coming soon</span>
+            </a>
+            <a href="#" class="dash-card dash-card-disabled">
+              <div class="dash-icon">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M5 20v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 2v2M18 6l-1.5 1.5M6 6l1.5 1.5M20 12h-2M4 12H2M18 18l-1.5-1.5M6 18l1.5-1.5" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <h4>Data Management</h4>
+              <p>Centralized resident &amp; vehicle records</p>
+              <span class="dash-soon">Coming soon</span>
+            </a>
+          </div>
+        </div>
+
+        <p class="footer-note dashboard-footer">Estate E-Tag System &bull; Role-based access &bull; v2.0</p>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/session.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
