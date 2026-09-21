@@ -1,0 +1,27 @@
+.etag-shell { max-width: 660px; }
+
+.upload {
+  display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: center;
+  border: 1px dashed #b9c7c1; border-radius: 10px; padding: 13px 14px; background: #fbfcfc;
+}
+.upload-icon { width: 34px; height: 34px; border-radius: 8px; background: #edf3f0; color: var(--green-dark); display: grid; place-items: center; }
+.upload-copy strong { display: block; font-size: 12px; }
+.upload-copy small { display: block; font-size: 10px; color: #89958f; margin-top: 2px; }
+.upload input { grid-column: 1 / -1; width: 100%; font-size: 11px; }
+.file-name { font-size: 10px; color: var(--green-dark); margin: 5px 2px 0; }
+
+.hint { margin-top: 17px; padding: 11px 12px; border-radius: 8px; background: var(--surface); color: #71807a; font-size: 11px; line-height: 1.45; }
+
+.success-card { margin-top: 20px; padding: 23px; border: 1px solid #d7e9dc; border-radius: 12px; background: var(--green-soft); text-align: center; }
+.success-mark { width: 40px; height: 40px; margin: auto; border-radius: 50%; display: grid; place-items: center; background: var(--green); color: #fff; font-weight: 900; }
+.success-card h2 { margin: 12px 0 6px; font-size: 20px; }
+.success-card p { font-size: 12px; line-height: 1.45; color: #5d7167; margin: 0 auto 17px; max-width: 430px; }
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: left; margin-bottom: 17px; }
+.summary div { background: #fff; border: 1px solid #dce9df; border-radius: 8px; padding: 10px; }
+.summary span { display: block; color: #89958f; font-size: 10px; margin-bottom: 4px; }
+.summary strong { font-size: 11px; }
+.status-pending { color: var(--green-dark); }
+.success-card .btn-outline { height: 40px; padding: 0 18px; }
+
+@media (max-width: 800px) { .safe { text-align: left; } }
+@media (max-width: 560px) { .summary { grid-template-columns: 1fr; } }

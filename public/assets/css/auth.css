@@ -1,0 +1,65 @@
+.sidebar { overflow: hidden; padding-bottom: 44px; }
+.sidebar-content { position: relative; z-index: 2; max-width: 190px; margin: 0 auto; }
+
+.city {
+  position: absolute; left: -5px; right: -5px; bottom: 0; height: 148px;
+  opacity: .55;
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, .03), transparent 60%),
+    repeating-linear-gradient(90deg, transparent 0 10px, rgba(255, 255, 255, .03) 10px 27px);
+}
+.city::before {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 88%;
+  background:
+    linear-gradient(90deg,
+      rgba(255, 255, 255, .035) 0 9%, transparent 9% 15%,
+      rgba(255, 255, 255, .03) 15% 26%, transparent 26% 32%,
+      rgba(255, 255, 255, .035) 32% 39%, transparent 39% 48%,
+      rgba(255, 255, 255, .03) 48% 57%, transparent 57% 64%,
+      rgba(255, 255, 255, .035) 64% 71%, transparent 71% 79%,
+      rgba(255, 255, 255, .03) 79% 90%, transparent 90%);
+  clip-path: polygon(
+    0 70%, 8% 70%, 8% 55%, 16% 55%, 16% 72%, 24% 72%, 24% 46%,
+    31% 46%, 31% 68%, 40% 68%, 40% 37%, 46% 37%, 46% 74%, 55% 74%,
+    55% 54%, 63% 54%, 63% 32%, 70% 32%, 70% 70%, 77% 70%, 77% 45%,
+    86% 45%, 86% 60%, 94% 60%, 94% 42%, 100% 42%, 100% 100%, 0 100%);
+  background-color: rgba(255, 255, 255, .06);
+}
+
+.content { display: flex; align-items: flex-start; justify-content: center; padding-top: 36px; }
+.auth-shell { max-width: 430px; }
+
+.safe { justify-content: flex-end; margin-bottom: 17px; }
+.subtitle { margin-bottom: 28px; }
+
+.helper-row {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; margin: -3px 0 19px; font-size: 11px; color: var(--muted);
+}
+
+.divider { display: flex; align-items: center; gap: 12px; color: #89958f; font-size: 11px; margin: 22px 0 17px; }
+.divider::before, .divider::after { content: ""; height: 1px; background: #d9dfdc; flex: 1; }
+
+.alt-row { display: grid; grid-template-columns: 1fr; }
+.alt-btn { width: 100%; height: 40px; }
+
+.bottom { margin-top: 19px; text-align: center; font-size: 12px; color: #808c87; }
+.bottom a { color: var(--green-dark); font-weight: 800; text-decoration: none; }
+
+.password-meter { display: flex; gap: 5px; margin-top: 7px; }
+.password-meter span { height: 3px; flex: 1; border-radius: 2px; background: #e0e6e3; transition: background .15s ease; }
+.password-meter span.filled { background: var(--green); }
+
+@media (max-width: 800px) {
+  .sidebar-content { max-width: 620px; }
+  .city { display: none; }
+  .safe { justify-content: flex-start; }
+  .content { padding-top: 28px; }
+}
+
+@media (max-width: 560px) {
+  .brand { margin-bottom: 28px; }
+  .form-shell { width: 100%; }
+  .row, .alt-row { grid-template-columns: 1fr; }
+}

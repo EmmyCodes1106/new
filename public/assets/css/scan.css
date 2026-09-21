@@ -1,0 +1,69 @@
+.scan-shell { max-width: 760px; }
+
+.gate-status {
+  padding: 10px 12px; border: 1px solid #d7e9dc; border-radius: 9px;
+  background: var(--green-soft); color: #42654f; font-size: 11px; margin-bottom: 15px;
+}
+.online-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--green); margin-right: 7px; }
+
+.scanner-card { padding: 20px; border: 1px solid var(--line); border-radius: 12px; text-align: center; background: #fff; }
+.scan-frame {
+  position: relative; height: 250px; display: grid; place-items: center;
+  overflow: hidden; border-radius: 10px; background: var(--surface); border: 1px solid #e3eae7;
+}
+.scan-symbol { font-size: 56px; color: #879a92; }
+.scan-frame p { position: absolute; bottom: 20px; margin: 0; color: #71807a; font-size: 11px; line-height: 1.45; }
+.corner { position: absolute; width: 34px; height: 34px; border-color: var(--green); border-style: solid; }
+.tl { left: 25%; top: 25%; border-width: 3px 0 0 3px; }
+.tr { right: 25%; top: 25%; border-width: 3px 3px 0 0; }
+.bl { left: 25%; bottom: 25%; border-width: 0 0 3px 3px; }
+.br { right: 25%; bottom: 25%; border-width: 0 3px 3px 0; }
+.scan-line { position: absolute; left: 27%; right: 27%; height: 2px; top: 50%; background: var(--green); box-shadow: 0 0 12px rgba(62, 174, 108, .4); }
+.scanner-card .btn { margin-top: 15px; }
+.scan-hint { margin: 10px 0 0; color: #8a9691; font-size: 10px; }
+
+.or-divider { display: flex; align-items: center; gap: 12px; color: #8a9691; font-size: 10px; margin: 21px 0; }
+.or-divider::before, .or-divider::after { content: ""; height: 1px; background: #e0e6e3; flex: 1; }
+
+.lookup-card, .result-card { border: 1px solid var(--line); border-radius: 12px; background: #fff; padding: 17px; }
+.lookup-card h2 { font-size: 14px; margin: 0 0 4px; }
+.lookup-card p { font-size: 10px; color: var(--muted); margin: 0 0 13px; }
+.lookup-row { display: grid; grid-template-columns: 145px 1fr 92px; gap: 9px; }
+.lookup-row select, .lookup-row input {
+  height: 42px; border: 1px solid var(--line); border-radius: 8px; padding: 0 11px;
+  color: var(--ink); background: #fff; font-size: 12px;
+}
+.lookup-row select:focus, .lookup-row input:focus { outline: 0; border-color: var(--green); box-shadow: 0 0 0 3px rgba(62, 174, 108, .10); }
+.lookup-btn { height: 42px; border: 0; border-radius: 8px; background: #264a3e; color: #fff; font-size: 12px; font-weight: 800; cursor: pointer; }
+.error-input { border-color: var(--danger) !important; }
+
+.result-card { margin-top: 15px; }
+.result-placeholder { display: flex; gap: 11px; align-items: center; color: #71807a; }
+.result-icon { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--green-soft); color: var(--green-dark); }
+.result-placeholder strong { font-size: 12px; }
+.result-placeholder p { font-size: 10px; margin: 3px 0 0; }
+.result-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.result-badge { padding: 8px 11px; border-radius: 7px; font-size: 12px; font-weight: 900; }
+.valid .result-badge { background: var(--green-soft); color: var(--green-dark); }
+.denied .result-badge { background: var(--danger-soft); color: var(--danger); }
+.result-time { color: #89958f; font-size: 10px; }
+.result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-bottom: 14px; border-bottom: 1px solid #e5ebe8; }
+.result-grid div { padding: 9px; background: var(--surface); border-radius: 7px; }
+.result-grid span { display: block; color: #89958f; font-size: 9px; margin-bottom: 4px; }
+.result-grid strong { font-size: 11px; }
+.result-message { margin-top: 12px; font-size: 11px; font-weight: 700; }
+.valid .result-message { color: var(--green-dark); }
+.denied .result-message { color: var(--danger); }
+
+@media (max-width: 800px) { .topbar { gap: 12px; } }
+@media (max-width: 600px) {
+  .topbar { flex-direction: column; }
+  .user-chip { align-self: flex-start; }
+  .lookup-row { grid-template-columns: 1fr; }
+  .result-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  .scanner-card { padding: 14px; }
+  .scan-frame { height: 220px; }
+  .result-grid { grid-template-columns: 1fr; }
+}
