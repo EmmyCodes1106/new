@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports | Estate E-Tag System</title>
+  <link rel="stylesheet" href="assets/css/shared.css"><link rel="stylesheet" href="assets/css/admin-pages.css">
+</head>
+<body><main class="page">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 55 55" width="55" height="55"><polygon points="9,3 45,3 45,36 27,54 9,36" stroke="#3eae6c" stroke-width="3" fill="none"/><polygon points="21,21 34,21 34,39 21,47 21,39" fill="#3eae6c" opacity=".9"/><rect x="27" y="13" width="10" height="8" fill="#3eae6c" opacity=".4" rx="1"/></svg></div><div class="brand-name">ESTATE E-TAG</div><div class="brand-system">SYSTEM</div></div>
+    <h2>Admin <span>workspace.</span></h2><p class="sidebar-copy">Review applications, maintain estate records and track operations.</p>
+    <nav class="admin-sidebar-nav" aria-label="Administration"><a href="dashboard.html"><span class="nav-icon">⌂</span> Dashboard</a><a href="review-application.html" class=""><span class="nav-icon">✓</span> Review applications</a><a href="data-management.html" class=""><span class="nav-icon">▤</span> Data management</a><a href="reports.html" class="active"><span class="nav-icon">▥</span> Reports</a></nav>
+    <div class="admin-sidebar-note">Prototype mode<br>Changes are saved in this browser only. This is not a live database.</div>
+  </aside>
+  <section class="content admin-content"><div class="form-shell admin-shell">
+    <div class="topbar"><div class="user-chip"><span class="avatar" data-user-avatar>EA</span><div><strong data-user-name>Estate Admin</strong><small data-user-role>Estate Administrator</small></div></div><div class="safe"><span class="safe-icon">✓</span><span>Estate operations<br>workspace</span></div></div>
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    <div class="admin-main">
+<div class="admin-heading"><div><h1>Reports &amp; analytics</h1><p>A snapshot of E-Tag applications and estate records.</p></div><div class="heading-actions"><label class="admin-btn" for="reportPeriod">Reporting period</label><select id="reportPeriod" class="admin-btn" aria-label="Reporting period"><option value="all">All available data</option><option value="30">Last 30 days</option><option value="7">Last 7 days</option></select><button class="admin-btn primary" id="exportReport">↓ Export report CSV</button></div></div>
+<div class="stat-grid"><article class="stat-card"><div class="stat-top">Applications <span class="stat-icon">▤</span></div><div class="stat-number" id="reportTotal">0</div><div class="stat-foot">Requests in selected period</div></article><article class="stat-card"><div class="stat-top">Approval rate <span class="stat-icon">✓</span></div><div class="stat-number" id="approvalRate">0%</div><div class="stat-foot">Approved out of decided requests</div></article><article class="stat-card"><div class="stat-top">Pending review <span class="stat-icon">◷</span></div><div class="stat-number" id="reportPending">0</div><div class="stat-foot">Awaiting an administrator decision</div></article><article class="stat-card"><div class="stat-top">Registered vehicles <span class="stat-icon">▰</span></div><div class="stat-number" id="reportVehicles">0</div><div class="stat-foot">Current register total</div></article></div>
+<div class="report-grid"><section class="admin-card"><div class="admin-card-head"><div><h2>Application outcomes</h2><p>Distribution by current status</p></div></div><div id="outcomeChart" class="chart-area" aria-label="Application outcomes chart"></div><div class="legend"><span><i></i> Approved</span><span><i class="pending-dot"></i> Pending</span><span><i class="rejected-dot"></i> Rejected</span></div></section><section class="admin-card"><div class="admin-card-head"><div><h2>Processing overview</h2><p>Current status mix</p></div></div><div id="statusBreakdown"></div></section></div>
+<section class="admin-card"><div class="admin-card-head"><div><h2>Recent applications</h2><p>Latest recorded requests in the selected period</p></div><a class="link" href="review-application.html">Review queue →</a></div><div class="table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Applicant</th><th>Vehicle</th><th>Date submitted</th><th>Status</th></tr></thead><tbody id="reportRows"></tbody></table><div id="reportEmpty" class="empty-state" hidden>No applications are available for this period.</div></div></section>
+<div class="notice-line">Report figures are calculated from browser-local prototype data. They are intended for demonstration and are not live estate-wide analytics.</div>    </div><p class="admin-footer">Estate E-Tag System · Admin workspace · Prototype data stored locally</p>
+  </div></section>
+</main><div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script src="assets/js/session.js"></script><script src="assets/js/admin-pages.js"></script><script src="assets/js/reports.js"></script>
+</body></html>

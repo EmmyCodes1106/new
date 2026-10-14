@@ -76,6 +76,7 @@ and the rest of the pages don't need to change.
 - **No role-based route protection.** Any signed-in session can open any
   page by URL (e.g. a resident could open `scan.html`). The dashboard only
   *shows* the tools relevant to the chosen role.
+- **Admin workspace is a frontend prototype.** Application decisions and record changes use browser `localStorage`; sample data is seeded on first use. CSV exports are generated in the browser.
 - **Demo data.** The resident profile, vehicles, and E-Tag status on
   `profile.html` are fixed sample data, not tied to the signed-in session.
 

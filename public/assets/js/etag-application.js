@@ -77,6 +77,36 @@ form.addEventListener('submit', (event) => {
     summaryVehicle.textContent = option.textContent.trim();
     summaryPlate.textContent = option.dataset.plate || '';
 
+    // Store the request in the same browser-local collection used by the admin review page.
+    // This remains prototype-only; uploaded documents are not sent to a server.
+    const application = {
+      id: `ET-${new Date().getFullYear()}-${Date.now().toString().slice(-6)}`,
+      name: session.name || 'Resident',
+      email: session.email || '',
+      vehicle: option.textContent.trim(),
+      plate: option.dataset.plate || '',
+      color: option.dataset.color || '',
+      make: option.dataset.make || '',
+      model: option.dataset.model || '',
+      submitted: new Date().toISOString().slice(0, 10),
+      status: 'Pending',
+      note: ''
+    };
+    try {
+      const existing = JSON.parse(localStorage.getItem('etagApplications') || 'null');
+      const applications = Array.isArray(existing) ? existing : [
+        {id:'ET-2026-001',name:'Amara Okafor',email:'amara.okafor@example.com',vehicle:'Toyota Corolla',plate:'ABC 123 XY',color:'Black',make:'Toyota',model:'Corolla',submitted:'2026-10-12',status:'Pending',note:''},
+        {id:'ET-2026-002',name:'Daniel Williams',email:'daniel.w@example.com',vehicle:'Honda Civic',plate:'KJA 456 AB',color:'White',make:'Honda',model:'Civic',submitted:'2026-10-11',status:'Approved',note:'Documents checked.'},
+        {id:'ET-2026-003',name:'Zainab Bello',email:'z.bello@example.com',vehicle:'Hyundai Tucson',plate:'LND 802 QZ',color:'Silver',make:'Hyundai',model:'Tucson',submitted:'2026-10-09',status:'Pending',note:''},
+        {id:'ET-2026-004',name:'Michael Adeyemi',email:'m.adeyemi@example.com',vehicle:'Kia Sportage',plate:'GWA 441 TR',color:'Blue',make:'Kia',model:'Sportage',submitted:'2026-10-06',status:'Rejected',note:'Please provide a clearer ownership document.'},
+        {id:'ET-2026-005',name:'Grace Thompson',email:'grace.t@example.com',vehicle:'Toyota Yaris',plate:'FST 100 MN',color:'Red',make:'Toyota',model:'Yaris',submitted:'2026-10-02',status:'Approved',note:''}
+      ];
+      applications.unshift(application);
+      localStorage.setItem('etagApplications', JSON.stringify(applications));
+    } catch (error) {
+      console.error('Could not save the demo application.', error);
+    }
+
     form.hidden = true;
     successCard.hidden = false;
   }, 700);

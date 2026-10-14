@@ -28,6 +28,9 @@ const pages = {
   '/vehicle-registration': 'vehicle-registration.html',
   '/etag-application': 'etag-application.html',
   '/scan': 'scan.html',
+  '/review-application': 'review-application.html',
+  '/data-management': 'data-management.html',
+  '/reports': 'reports.html',
 };
 
 Object.entries(pages).forEach(([route, file]) => {
